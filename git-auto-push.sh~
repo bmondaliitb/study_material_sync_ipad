@@ -1,0 +1,12 @@
+#!/bin/bash
+
+git add -u .
+git commit -m "dc"
+expect - <<EOF
+spawn git push
+expect "Username for 'https://github.com':"
+send "bmondaliitb"
+expect "Password for 'https://bmondaliitb@github.com':"
+send "Gourir@n1"
+EOF
+
