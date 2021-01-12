@@ -1,0 +1,28 @@
+##########Analysis###########
+The analysis is done for mu+jets only because there is not sufficient e+jets events!
+########Complie and run#########
+The framework works out-of-the-box as follows:
+To compile
+$ make
+To execute
+$ ./example.x
+
+
+############Important Note#########
+results_MC.pdf was meant to look at MC signal and background BUT I am using it to draw only signal TRUTH distributions.
+results.pdf is MC/data comparison
+
+######Important Notations of plots########
+In x-titles of Histograms:
+BES (Before Event Selection)
+AES (After Event Selection)
+
+######### Nr. Events#########
+To get number of events of each process, one has to get it from terminal where the outlayer is self-explanatory
+
+
+#########To be done#############
+If so far everything is alright:
+1- Get efficiencies and acceptances in order to perform the x-section calculation
+2- Clean up the code and add some options, for ex: write yeilds next to legend
+

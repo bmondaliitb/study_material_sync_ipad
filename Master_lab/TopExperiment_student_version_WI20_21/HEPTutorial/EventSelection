@@ -1,0 +1,147 @@
+####################
+Start of reading 'data'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 469384
+No. of Reconstructed events after 'Trigger cut': 469384
+No. of Reconstructed events after 'At least one Muon cut': 242119
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 229557
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 208755
+No. of Reconstructed events after 'At least 4 Jets cut': 1817
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 521
+No. of Reconstructed events after 'At least 2 bjets cut': 104
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 104
+------------------------------------------ 
+------------------------------------------ 
+data finished!!!!
+####################
+Start of reading 'ttbar'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 36941
+No. of Reconstructed events after 'Trigger cut': 4515
+No. of Reconstructed events after 'At least one Muon cut': 4163
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 4068
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 3717
+No. of Reconstructed events after 'At least 4 Jets cut': 2439
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 1269
+No. of Reconstructed events after 'At least 2 bjets cut': 444
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 100.821
+------------------------------------------ 
+------------------------------------------ 
+ttbar finished!!!!
+####################
+Start of reading 'wjets'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 109737
+No. of Reconstructed events after 'Trigger cut': 109737
+No. of Reconstructed events after 'At least one Muon cut': 102657
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 99015
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 89376
+No. of Reconstructed events after 'At least 4 Jets cut': 430
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 69
+No. of Reconstructed events after 'At least 2 bjets cut': 1
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 0.712991
+------------------------------------------ 
+------------------------------------------ 
+wjets finished!!!!
+####################
+Start of reading 'dy'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 77729
+No. of Reconstructed events after 'Trigger cut': 77729
+No. of Reconstructed events after 'At least one Muon cut': 75548
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 73065
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 69559
+No. of Reconstructed events after 'At least 4 Jets cut': 579
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 123
+No. of Reconstructed events after 'At least 2 bjets cut': 3
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 1.47542
+------------------------------------------ 
+------------------------------------------ 
+dy finished!!!!
+####################
+Start of reading 'ww'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 4580
+No. of Reconstructed events after 'Trigger cut': 4580
+No. of Reconstructed events after 'At least one Muon cut': 4316
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 4210
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 3887
+No. of Reconstructed events after 'At least 4 Jets cut': 218
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 23
+No. of Reconstructed events after 'At least 2 bjets cut': 0
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 0
+------------------------------------------ 
+------------------------------------------ 
+ww finished!!!!
+####################
+Start of reading 'wz'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 3367
+No. of Reconstructed events after 'Trigger cut': 3367
+No. of Reconstructed events after 'At least one Muon cut': 3210
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 3119
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 2959
+No. of Reconstructed events after 'At least 4 Jets cut': 216
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 36
+No. of Reconstructed events after 'At least 2 bjets cut': 1
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 0.0240225
+------------------------------------------ 
+------------------------------------------ 
+wz finished!!!!
+####################
+Start of reading 'zz'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 2421
+No. of Reconstructed events after 'Trigger cut': 2421
+No. of Reconstructed events after 'At least one Muon cut': 2362
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 2313
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 2223
+No. of Reconstructed events after 'At least 4 Jets cut': 174
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 25
+No. of Reconstructed events after 'At least 2 bjets cut': 0
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 0
+------------------------------------------ 
+------------------------------------------ 
+zz finished!!!!
+####################
+Start of reading 'qcd'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 142
+No. of Reconstructed events after 'Trigger cut': 142
+No. of Reconstructed events after 'At least one Muon cut': 18
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 16
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 10
+No. of Reconstructed events after 'At least 4 Jets cut': 2
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 1
+No. of Reconstructed events after 'At least 2 bjets cut': 0
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 0
+------------------------------------------ 
+------------------------------------------ 
+qcd finished!!!!
+####################
+Start of reading 'single top'
+------------------------------------------ 
+--------------Event Selection------------- 
+No. of Reconstructed events initialy: 5684
+No. of Reconstructed events after 'Trigger cut': 5684
+No. of Reconstructed events after 'At least one Muon cut': 5412
+No. of Reconstructed events after 'One Muon with a 25 GeV pt cut': 5276
+No. of Reconstructed events after 'Muon Isolation of 0.09 cut': 4844
+No. of Reconstructed events after 'At least 4 Jets cut': 1102
+No. of Reconstructed events after 'True Jet with min Pt of 30 GeV cut': 327
+No. of Reconstructed events after 'At least 2 bjets cut': 86
+No. of FINAL Reconstructed events scaled to data (for data weight is 1): 4.58387
+------------------------------------------ 
+------------------------------------------ 
+single top finished!!!!
+####################
+
+

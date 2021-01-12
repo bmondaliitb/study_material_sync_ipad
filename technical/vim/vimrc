@@ -1,0 +1,251 @@
+" By Huecking
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ","
+
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" Enable folding
+set foldmethod=syntax
+set foldlevel=99
+map <leader>cl :foldclose<CR>
+map <leader>co :foldopen<CR>
+
+
+
+" 1 tab == 3 spaces
+set shiftwidth=3
+set tabstop=3
+" for html/rb files, 2 spaces
+au Filetype python 
+    \ setlocal tabstop=4 |
+    \ setlocal softtabstop=4 |
+    \ setlocal shiftwidth=4 |
+    \ setlocal textwidth=79 |
+    \ setlocal expandtab |
+    \ setlocal autoindent |
+    \ setlocal fileformat=unix |
+    \ setlocal foldmethod=indent 
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+set number
+set colorcolumn=80
+
+" show a visual line under the cursor's current line
+set cursorline
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+
+" pretyy python 
+syntax on
+let python_highlight_all=1
+
+" easy window changing
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+" easy to use replace 
+nnoremap <Leader>re :%s/\<<C-r><C-w>\>//g<Left><Left>
+" easy search over multiple files 
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+map <leader>gs :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
+command ReplFNam %s/Introcpp.cxx/\=expand('%:t')/g 
+command InsDate put=strftime('%Y-%m-%d')
+command ReplDate %s/2019-10-17/\=strftime('%Y-%m-%d')/g
+command InsCppHeader r /home/huecking/Templates/Introcpp.cpp <CR> :ReplFNam <CR> :ReplDate
+command SaveAsPs !iconv %:p  -c -f utf-8 -t ISO-8859-1 | a2ps --center-title=% -o %:p.ps
+command Prnt !iconv %:p  -c -f utf-8 -t ISO-8859-1 | a2ps --center-title=% -o %:p.ps && lpr -P HP_LaserJet_P3015_monet %:p.ps
+command Ps !iconv %:p  -c -f utf-8 -t ISO-8859-1 | a2ps --center-title=% -o %:p.ps 
+
+" Insert cpp header without doxygen to file, replace date and filename automatically
+function! InsCppHeaderNoDox()
+    :r /home/huecking/Templates/IntrocppNoDox.cpp
+    :ReplDate
+    :ReplFNam
+    :1delete
+endfunction
+
+" Insert cpp header to file, replace date and filename automatically
+function! InsCppHeader()
+    :r /home/huecking/Templates/Introcpp.cpp
+    :ReplDate
+    :ReplFNam
+    :1delete
+endfunction
+
+" Insert python header and replace date and fielname automatically
+function! InsPyHeader()
+    :r /home/huecking/Templates/Intropy.txt
+    :ReplDate
+    :ReplFNam
+    :1delete
+endfunction
+
+
+"
+" Vundle plugin manager
+"
+set nocompatible              " required
+filetype off                  " required
+
+"
+" Vundle plugin installer
+"
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin(~/some/path/here)
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" add all your plugins here (note older versions of Vundle
+" used Bundle instead of Plugin)
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" Colorscheme
+Plugin 'jnurmine/Zenburn' 
+" File browser 
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/python-mode'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'lervag/vimtex'
+" Commenting
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'altercation/vim-colors-solarized'
+"Plugin 'vim-scripts/taglist.vim'
+Plugin 'airblade/vim-gitgutter'
+" Fuzzy search in buffer list
+Plugin 'kien/ctrlp.vim'
+" Syntax checking
+Plugin 'vim-syntastic/syntastic'
+" Provide list of functions/ classes 
+Plugin 'majutsushi/tagbar'
+" Show open files in small window
+Plugin 'fholgado/minibufexpl.vim'
+"Plugin 'uplus/vim-clang-rename'
+Plugin 'mbbill/undotree'
+Plugin 'terryma/vim-multiple-cursors'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Python moder ( 3 vs 2 )
+let g:pymode_python = 'python3'
+"Jump to previous class or method (normal, visual, operator modes)
+map <leader>pf [M    
+"Jump to next class or method (normal, visual, operator modes)
+map <leader>nf ]M    
+
+" Nerdrtree
+"autocmd vimenter * NERDTree
+" show nerd tree
+map <C-n> :NERDTreeToggle<CR>
+"map <leader>tt :TlistToggle<CR>
+map <leader>tt :TagbarToggle<CR>
+
+" Ctrlp open buffer list 
+map <C-b> :CtrlPBuffer<CR>
+let g:ctrlp_custom_ignore = { 
+ \ 'dir' : '\v[\/](\.git|build|doc)$'}
+
+" Folding
+let g:SimpylFold_docstring_preview=1
+
+" airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'"Select theme"
+let g:airline_right_sep = ""
+let g:airline_left_sep = ""
+let g:airline_right_alt_sep = ""
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Zenburn color 
+try
+    "colorscheme Zenburn 
+   colorscheme Zenburn
+   set background=dark
+   "set background=light
+catch
+endtry
+"g:solarized_termcolors=16
+"g:solarized_bold=1
+"g:solarized_underline=1  
+"g:solarized_italic=1
+
+
+let mapleader = ","
+
+"
+"Definition for youcompletme
+"
+map <leader>gt :YcmCompleter GoTo<cr>
+map <leader>gf :YcmCompleter GoToImprecise<cr> "go to fast
+map <leader>gd :YcmCompleter GetDoc<cr>
+map <leader>gr  :YcmCompleter GoToReferences<cr>
+map <leader>dc :YcmCompleter GoToDeclaration<cr>
+map <leader>df :YcmCompleter GoToDefinition<cr>
+map <leader>in :YcmCompleter GoToInclude<cr>
+map <leader>fx :YcmCompleter FixIt<cr>
+let g:ycm_complete_in_comments=1
+let g:ycm_use_clangd = 1
+
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+"
+" search 
+"
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases 
+set smartcase
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Show tab completion options
+set wildmenu
+set wildmode=list:longest,full
