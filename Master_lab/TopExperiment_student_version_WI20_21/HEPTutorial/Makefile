@@ -1,7 +1,7 @@
 # Makefile for HEP Tutorial
 
-C=c++
-LD=c++
+C=g++
+LD=g++
 
 ROOTCFLAGS=$(shell root-config --cflags)
 ROOTLIBS=$(shell root-config --libs)

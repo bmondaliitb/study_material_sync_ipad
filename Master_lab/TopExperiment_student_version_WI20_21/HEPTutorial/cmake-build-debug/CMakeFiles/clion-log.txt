@@ -1,0 +1,4 @@
+/snap/clion/138/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/cc -G "CodeBlocks - Unix Makefiles" /home/bmondal/Storage/Study_material/Master_lab/TopExperiment_student_version_WI20_21/HEPTutorial
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/bmondal/Storage/Study_material/Master_lab/TopExperiment_student_version_WI20_21/HEPTutorial/cmake-build-debug
